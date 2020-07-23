@@ -1,4 +1,3 @@
-
 Name:           attica
 Version:        0.4.2
 Release:        17%{?dist}
@@ -62,5 +61,5 @@ test "$(pkg-config --modversion libattica)" = "%{version}"
 
 
 %changelog
-* Thu Jan 31 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.4.2-17
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+* Thu Jul 23 2020 wangmian<wangmian@kylinos.cn> - 0.4.2-17
+- Init attica project
