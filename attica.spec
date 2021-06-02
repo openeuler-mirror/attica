@@ -1,6 +1,6 @@
 Name:           attica
 Version:        0.4.2
-Release:        17%{?dist}
+Release:        18
 Summary:        Implementation of the Open Collaboration Services API
 
 License:        LGPLv2+
@@ -61,5 +61,8 @@ test "$(pkg-config --modversion libattica)" = "%{version}"
 
 
 %changelog
+* Mon Dec 12 2020 huanghaitao <huanghaitao8@huawei.com> - 0.4.2-18
+- Remove the release suffix
+
 * Thu Jul 23 2020 wangmian<wangmian@kylinos.cn> - 0.4.2-17
 - Init attica project
