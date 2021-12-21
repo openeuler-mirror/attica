@@ -1,11 +1,13 @@
 Name:           attica
 Version:        0.4.2
-Release:        18
+Release:        19
 Summary:        Implementation of the Open Collaboration Services API
 
 License:        LGPLv2+
 URL:            http://www.kde.org
 Source0:        http://download.kde.org/stable/attica/attica-%{version}.tar.bz2
+
+patch1: 0001-Add-auto-generated-files-to-.gitignore.patch
 
 BuildRequires:  cmake >= 2.8
 BuildRequires:  gcc-c++
@@ -24,6 +26,7 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %prep
 %setup -q
+%patch1 -p1
 
 
 %build
@@ -61,6 +64,9 @@ test "$(pkg-config --modversion libattica)" = "%{version}"
 
 
 %changelog
+* Tue Dec 21 2021 tanyulong <tanyulong@kylinos.cn> - 0.4.2-19
+- Add auto generated files to .gitignore
+
 * Mon Dec 12 2020 huanghaitao <huanghaitao8@huawei.com> - 0.4.2-18
 - Remove the release suffix
 
