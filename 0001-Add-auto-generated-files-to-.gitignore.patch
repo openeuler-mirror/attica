@@ -1,0 +1,43 @@
+From 058604320d5612715ad1b06bdbd9893261dae7d1 Mon Sep 17 00:00:00 2001
+From: tanyulong <tanyulong@kylinos.cn>
+Date: Tue, 21 Dec 2021 16:16:44 +0800
+Subject: [PATCH]  Add auto generated files to .gitignore
+
+---
+ .gitignore | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+ create mode 100644 .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..6e9efad
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,24 @@
++# Ignore the following files
++*~
++*.[oa]
++*.diff
++*.kate-swp
++*.kdev4
++.kdev_include_paths
++*.kdevelop.pcs
++*.moc
++*.moc.cpp
++*.orig
++*.user
++.*.swp
++.swp.*
++Doxyfile
++Makefile
++avail
++random_seed
++/build*/
++CMakeLists.txt.user*
++*.unc-backup*
++.cmake/
++/.clang-format
++/compile_commands.json
+-- 
+2.30.0
+
