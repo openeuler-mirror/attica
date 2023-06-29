@@ -1,6 +1,6 @@
 Name:           attica
 Version:        0.4.2
-Release:        20
+Release:        21
 Summary:        Implementation of the Open Collaboration Services API
 
 License:        Artistic-2.0 and LGPLv2+
@@ -8,6 +8,7 @@ URL:            http://www.kde.org
 Source0:        http://download.kde.org/stable/attica/attica-%{version}.tar.bz2
 
 patch1: 0001-Add-auto-generated-files-to-.gitignore.patch
+patch2: fix-clang.patch
 
 BuildRequires:  cmake >= 2.8
 BuildRequires:  gcc-c++
@@ -27,6 +28,7 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %prep
 %setup -q
 %patch1 -p1
+%patch2 -p1
 
 
 %build
@@ -64,6 +66,9 @@ test "$(pkg-config --modversion libattica)" = "%{version}"
 
 
 %changelog
+* Tue Jun 20 2023 yoo <sunyuechi@iscas.ac.cn> - 0.4.2-21
+- fix clang build error
+
 * Tue Apr 26 2022 tanyulong <tanyulong@kylinos.cn> - 0.4.2-20
 - modify license warning
 
